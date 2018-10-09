@@ -1,11 +1,14 @@
 # Cuckoooooo
+## make sure you have Ubuntu 18 or newer releasess
+## make sure your VM has lager than 15GB hard drive space
+
 How to install and use cuckoo with linux virtual machine
 
 ### Cuckoo Installation Problems and Solutions
 * [Complete documents](https://cuckoo.sh/docs/installation/host/requirements.html)
 * My Enviroment 
     * Host: Ubuntu 18.04.1 LTS
-    * Guest: Virtualbox ()
+    * Guest: Virtualbox (18.04)
 
 #### Do this before you try to edit configuration files
 * Setup host-only network on VM 
