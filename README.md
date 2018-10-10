@@ -68,6 +68,7 @@ How to install and use cuckoo with linux virtual machine
     ````
 * virtualbox.conf
     ````
+    
     [virtualbox]
     # Specify which VirtualBox mode you want to run your machines on.
     # Can be "gui" or "headless". Please refer to VirtualBox's official
@@ -116,14 +117,14 @@ How to install and use cuckoo with linux virtual machine
 * if you add a NAT network, it is possible cuckoo cannot capture your internet traffic. To solve that, use your host machine as a gateway 
    * Follow the Simple global routing instructions https://cuckoo.readthedocs.io/en/latest/installation/host/routing/
    * In your VM, add your host as a gateway 
-   ''''
+   ````
       sudo ip route add via 192.168.56.1 <your host's WLAN address>
-   ''''
+   ````
    * add 8.8.8.8 to the name server 
-   ''''
+   ````
       nano /etc/resolv.conf
-   ''''
+   ````
    write 
-   ''''
+   ````
       nameserver 8.8.8.8
-   ''''
+   ````
