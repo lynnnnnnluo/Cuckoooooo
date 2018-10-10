@@ -1,5 +1,5 @@
 # Cuckoooooo
-## make sure you have Ubuntu 18 or newer releasess
+## make sure you have Ubuntu 18 or newer releases
 ## make sure your VM has lager than 15GB hard drive space
 
 How to install and use cuckoo with linux virtual machine
@@ -112,4 +112,18 @@ How to install and use cuckoo with linux virtual machine
     # Example (vboxnet0 is the interface name):
     interface = <interface name> usually vboxnet0
     ````
-### to be continued...
+### Network 
+* if you add a NAT network, it is possible cuckoo cannot capture your internet traffic. To solve that, use your host machine as a gateway 
+   * Follow the Simple global routing instructions https://cuckoo.readthedocs.io/en/latest/installation/host/routing/
+   * In your VM, add your host as a gateway 
+   ''''
+      sudo ip route add via 192.168.56.1 <your host's WLAN address>
+   ''''
+   * add 8.8.8.8 to the name server 
+   ''''
+      nano /etc/resolv.conf
+   ''''
+   write 
+   ''''
+      nameserver 8.8.8.8
+   ''''
